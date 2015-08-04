@@ -1,0 +1,25 @@
+.main {
+  left: 0;
+  right: 0;
+  margin: 15vh auto 0 auto;
+  padding-top: 5vh;
+  width: 50%;
+  height: 85vh - 2em ;
+}
+.main p {
+  width: 100%;
+  margin: 1em auto;
+  padding: 8px 0;
+  left: 0;
+  right: 0;
+  border: 1px solid white;
+  border-radius: 15px;
+
+  text-align: center;
+  letter-spacing: 1px;
+  color: #fff;
+  font-size: 24px;
+}
+.main p:first-child {
+  margin-top: 0;
+}

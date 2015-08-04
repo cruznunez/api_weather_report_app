@@ -1,0 +1,84 @@
+$(conditions);
+$(resetSearch);
+$(spin);
+
+function resetSearch() {
+  $(".side").replaceWith("<%= j(render 'pages/side') %>");
+}
+
+function conditions() {
+  $('.main').html(
+    "<p style='display:none'>" +
+      <% @location.each do |a| %>
+        "<%= a %><br/>" +
+      <% end %>
+    "</p>"
+  )
+
+  $('.main p').fadeIn(1000, function (){
+    if($('.main p#conditions').length === 0){
+      $('.main').append("<p id='conditions' style='display:none'>" +
+          <% @conditions.each do |c| %>
+            "<%= c %><br/>" +
+          <% end %>
+      "</p>");
+    };
+    show();
+    setTimeout( sunTimes, 1000);
+  });
+};
+
+function sunTimes() {
+  if($('.main p#sun').length === 0){
+    $('.main').append("<p id='sun' style='display:none'>" +
+        "<%= j(@suntimes[:up]) %><br/>" +
+        "<%= j(@suntimes[:down]) %>" +
+      "</p>"
+    );
+  };
+  show();
+  setTimeout( ten_day_forecast, 1000);
+
+};
+
+function ten_day_forecast() {
+  if($('.main p#ten-day').length === 0){
+    $('.main').append("<p id='ten-day' style='display:none'>10 DAY FORECAST:<br/>" +
+        <% @forecasts.each do |f| %>
+          "<%= f %><br/>" +
+        <% end %>
+      "</p>"
+    );
+  };
+  show();
+  setTimeout( alerts, 1000);
+};
+
+function alerts() {
+  if($('.main p#alerts').length === 0){
+    $('.main').append("<p id='alerts' style='display:none'>ALERTS:<br/>" +
+      <% @alerts.each do |a| %>
+        "<%= a %><br/>" +
+      <% end %>
+      "</p>"
+    );
+  };
+  show();
+  setTimeout( hurricanes, 1000);
+};
+
+function hurricanes() {
+  if($('.main p#hurricanes').length === 0){
+    $('.main').append("<p id='hurricanes' style='display:none'>HURRICANES:<br/>" +
+                        <% @hurricanes.each do |hurricane| %>
+                          "<%= hurricane %><br/>" +
+                        <% end %>
+                      "</p>"
+    );
+  };
+  show();
+}
+
+function show() {
+  $('.main p').fadeIn(1000);
+}

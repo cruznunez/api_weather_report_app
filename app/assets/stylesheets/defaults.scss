@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Sans Pro';
+  font-weight: 400;
+  background: #f08c89;
+  background-image: asset_url("overlay.png"),
+      asset_url("header.svg"),
+      linear-gradient(75deg, #FF7088 15%, #F2B69D 55%);
+
+}

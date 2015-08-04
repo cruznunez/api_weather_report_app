@@ -1,0 +1,10 @@
+<div class='side'>
+  <%= form_tag('/get', method: 'post', remote: true) do %>
+    <p>
+      <%= label_tag :zip, 'Search for:' %>
+      <%= number_field_tag :zip %>
+      <%= submit_tag 'Search', id: 'button' %>
+      <i class="fa fa-spinner fa-pulse fa-lg" style="display:none;"></i>
+    </p>
+  <% end %>
+</div>

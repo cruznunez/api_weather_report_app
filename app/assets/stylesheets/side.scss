@@ -1,0 +1,56 @@
+.side {
+  float: left;
+  width: 25%;
+  height: 40vh;
+  position: absolute;
+
+}
+.side p {
+  margin: 5vh auto;
+  width: 90%;
+  left: 0;
+  right: 0;
+  border: 1px solid white;
+  border-radius: 15px;
+  padding: 12px 0 24px;
+  text-align: center;
+  color: #fff;
+  font-size: 24px;
+}
+label {
+  line-height: 0;
+}
+input#zip {
+  width: 89%;
+  margin: 16px 0 24px 0;
+  font: inherit;
+  border: 1.5px solid white;
+  border-radius: 6px;
+  background: transparent;
+  color: white;
+  padding: 0 0 0 1px;
+}
+input#zip:focus {
+  outline: none;
+}
+input#zip:-webkit-autofill {
+  background-color: transparent;
+  background-image: none;
+  color: white;
+}
+input#button {
+  font-size: 24px;
+  background: #fff;
+  border: 1px solid white;
+  border-color: white;
+  border-radius: 6px;
+  width: 90%;
+  padding: 0.2em 0;
+  color: #ff7088;
+  transition: color 0.25s, background 0.25s;
+}
+input#button:hover {
+  color: white;
+  background: #ff7088;
+  cursor: pointer;
+}
