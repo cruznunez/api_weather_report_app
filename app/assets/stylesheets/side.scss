@@ -1,3 +1,4 @@
+$buttonColor: #FF899C;
 .side {
   float: left;
   width: 25%;
@@ -46,12 +47,12 @@ input#button {
   border-radius: 6px;
   width: 90%;
   padding: 0.2em 0;
-  color: #ff7088;
-  transition: color 0.25s, background 0.25s;
+  color: $buttonColor;
+  transition: color .25s, background .25s;
 }
 input#button:hover {
   color: white;
-  background: #ff7088;
+  background: $buttonColor;
   cursor: pointer;
 }
 input#button:focus {
