@@ -4,8 +4,9 @@
 function spin() {
   $('#button').click(function() {
     $('.main p').fadeOut(1000);
-    $(this).hide();
-    $('.fa-spinner').show();
+    $(this).fadeOut(function(){
+      $('.fa-spinner').fadeIn();
+    });
   })
 }
 

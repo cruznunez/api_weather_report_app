@@ -54,3 +54,9 @@ input#button:hover {
   background: #ff7088;
   cursor: pointer;
 }
+input#button:focus {
+  outline: none;
+}
+i.fa.fa-spinner.fa-pulse {
+  font-size: 37px;
+}
